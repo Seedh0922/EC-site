@@ -37,12 +37,12 @@
         <span id="count">1</span>
     </h1>
     <button onclick="plus()">+</button>
-    <button onclick="Minus()">-</button>
+    <button onclick="minus()">-</button>
     <h1>총가격
         <span id="All">3000</span>
     </h1>
-    <button onclick="CartText()" id="cartButton">장바구니담기</button>
-    <button onclick="BuyText()" id="buyButton">구매</button>
+    <button onclick="toggleCart()" id="cartButton">장바구니담기</button>
+    <button onclick="buyProduct()" id="buyButton">구매</button>
 
 
     <script>
@@ -67,7 +67,7 @@
             }
         }
 
-        function Minus() {
+        function minus() {
             if (isInCart == true) {
                 alert("장바구니에 담긴 상품입니다.");
                 return;
@@ -84,7 +84,7 @@
             document.getElementById("count").innerText = count;
             document.getElementById("All").innerText = 3000 * count;
         }
-        function CartText() {
+        function toggleCart() {
             if (isBought == true) {
                 alert("이미 구매한 상품입니다.");
                 return;
@@ -102,7 +102,7 @@
             }
         }
 
-        function BuyText() {
+        function buyProduct() {
             if (isBought == false) {
                 isBought = true;
                 isInCart = false;
