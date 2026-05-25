@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My first shop - Cart</title>
+</head>
+
+<body>
+    <h1>수량
+        <span id="count">1</span>
+    </h1>
+    <h1>총가격
+        <span id = "All">3000</span>
+    </h1>
+    <button onclick="plus()">+</button>
+    <button onclick="Minus()">-</button>
+    <script>
+        let count = 1;
+        if (count > 0) {
+            function plus() {
+                if(count < 10) {
+                    count = count + 1;
+                
+                document.getElementById("count").innerText = count;
+                document.getElementById("All").innerText = 3000*count ;
+                }else {
+                    alert("최대 수량은 10개입니다.");
+                }
+            }
+
+            function Minus() {
+                if (count > 1) {
+                    count = count - 1;
+                } else {
+                    alert("최소 수량은 1개입니다.");
+                }
+                document.getElementById("count").innerText = count;
+                document.getElementById("All").innerText = 3000*count ;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
